@@ -1,9 +1,5 @@
 #!/bin/bash
 
-echo "Upgrading pkg ..."
-apt update -y && apt upgrade -y >> /dev/null
-echo "Pkg Upgraded successfully!"
-
 echo "Installing pkg ..."
 apt install -y python3 python3-pip figlet cowsay lolcat neofetch >> /dev/null
 echo "Pkg Installed successfully!"
