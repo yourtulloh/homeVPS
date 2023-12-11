@@ -1,14 +1,14 @@
 #!/bin/bash
 
 echo "Upgrading pkg ..."
-apt update -y && apt upgrade -y > /dev/null
+apt update -y && apt upgrade -y >> /dev/null
 echo "Pkg Upgraded successfully!"
 
 echo "Installing pkg ..."
-apt install -y curl git python3 python3-pip figlet cowsay lolcat neofetch > /dev/null
+apt install -y wget git python3 python3-pip figlet cowsay lolcat neofetch >> /dev/null
 echo "Pkg Installed successfully!"
 
-curl -o ~/bw.py https://raw.githubusercontent.com/yourtulloh/homeVPS/master/bw.py > /dev/null
+wget -o ~/bw.py https://raw.githubusercontent.com/yourtulloh/homeVPS/master/bw.py >> /dev/null
 
 echo "Input Header Name:"
 read header_name
