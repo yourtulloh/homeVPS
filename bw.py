@@ -1,19 +1,17 @@
-# apt install -y python3 python3-pip figlet cowsay lolcat neofetch
-# nano .bashrc
-# paste code below in footer of .bashrc
-"""
-cowsay -f eyes Oracle Cloud | lolcat
-figlet Drivecok | lolcat
-date | lolcat
-python3 bw.py | lolcat
-"""
-
 try:
-    import os, psutil, httpx, shutil, subprocess
-except:
     import os
-    os.system("pip3 install --no-cache-dir psutil httpx[http2] > /dev/null")
-    import psutil, httpx, shutil, subprocess
+    import psutil
+    import httpx
+    import shutil
+    import subprocess
+except ImportError:
+    print("Some modules are missing. Installing them now...")
+    try:
+        subprocess.run(["pip", "install", "--no-cache-dir", "psutil", "httpx[http2]"], check=True)
+    except subprocess.CalledProcessError as e:
+        print(f"Failed to install required modules: {e}")
+        return
+    import os, psutil, shutil, httpx, subprocess
 
 
 def humansize(size):
@@ -28,7 +26,7 @@ def progress_bar_string(pct):
     p = min(max(pct, 0), 100)
     cFull = int(p // 8)
     p_str = "■" * cFull
-    p_str += "□" * (12 - cFull)
+    p_str += "□" * (15 - cFull)
     return f"[{p_str}]"
 
 
