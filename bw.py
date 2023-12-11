@@ -24,9 +24,9 @@ def humansize(size):
 def progress_bar_string(pct):
     pct = float(pct.strip("%"))
     p = min(max(pct, 0), 100)
-    cFull = int(p // 8)
+    cFull = int(p // 9)
     p_str = "■" * cFull
-    p_str += "□" * (15 - cFull)
+    p_str += "□" * (11 - cFull)
     return f"[{p_str}]"
 
 
