@@ -5,10 +5,10 @@ apt update -y && apt upgrade -y >> /dev/null
 echo "Pkg Upgraded successfully!"
 
 echo "Installing pkg ..."
-apt install -y wget git python3 python3-pip figlet cowsay lolcat neofetch >> /dev/null
+apt install -y curl python3 python3-pip figlet cowsay lolcat neofetch >> /dev/null
 echo "Pkg Installed successfully!"
 
-wget -o ~/bw.py https://raw.githubusercontent.com/yourtulloh/homeVPS/master/bw.py >> /dev/null
+curl -o ~/bw.py https://raw.githubusercontent.com/yourtulloh/homeVPS/master/bw.py >> /dev/null
 
 echo "Input Header Name:"
 read header_name
