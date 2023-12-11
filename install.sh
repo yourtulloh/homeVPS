@@ -1,11 +1,10 @@
 #!/bin/bash
-
-echo "Installing pkg ..."
-apt install -y python3 python3-pip figlet cowsay lolcat neofetch >> /dev/null
-echo "Pkg Installed successfully!"
-
-curl -o ~/bw.py -O https://raw.githubusercontent.com/yourtulloh/homeVPS/master/bw.py -s >> /dev/null
 clear
+echo "Installing pkg: python3 python3-pip figlet cowsay lolcat neofetch ... Please wait!"
+apt install -y python3 python3-pip figlet cowsay lolcat neofetch > /dev/null
+curl -o ~/bw.py -O https://raw.githubusercontent.com/yourtulloh/homeVPS/master/bw.py -s > /dev/null
+clear
+echo "Pkg Installed successfully!"
 echo "Input Header Name:"
 read header_name
 echo "Input Logo Name:"
