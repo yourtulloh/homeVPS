@@ -5,13 +5,15 @@ try:
     import shutil
     import subprocess
 except ImportError:
+    import subprocess
+    import sys
     print("Some modules are missing. Installing them now...")
     try:
         subprocess.run(["pip3", "install", "--no-cache-dir", "psutil", "httpx[http2]"], check=True)
     except subprocess.CalledProcessError as e:
         print(f"Failed to install required modules: {e}")
-        exit(1)
-    import os, psutil, shutil, httpx, subprocess
+        sys.exit(1)
+    import os, psutil, shutil, httpx
 
 
 def humansize(size):
