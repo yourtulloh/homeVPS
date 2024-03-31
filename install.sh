@@ -13,4 +13,4 @@ read logo_name
 echo -e "\n\ncowsay -f eyes $header_name | lolcat\nfiglet $logo_name | lolcat\ndate | lolcat\npython3 bw.py | lolcat" >> ~/.bashrc
 figlet HomeVPS | lolcat
 echo "Installed successfully. Now reconnect your VPS to take effect!" | lolcat
-exit
+python3 bw.py
