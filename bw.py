@@ -9,8 +9,8 @@ except ImportError:
     import sys
     print("Some modules are missing. Installing them now...")
     try:
-        subprocess.run(["pip3", "install", "--no-cache-dir", "psutil", "httpx[http2]"], check=True)
-    except subprocess.CalledProcessError as e:
+        subprocess.run(["pip3", "install", "--no-cache-dir", "psutil", "httpx[http2]"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL check=True)
+    except Execption as e:
         print(f"Failed to install required modules: {e}")
         sys.exit(1)
     import os, psutil, shutil, httpx
