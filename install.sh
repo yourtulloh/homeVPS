@@ -9,15 +9,17 @@ sudo apt update && sudo apt upgrade -y
 
 # Instal paket yang diperlukan
 echo "Menginstal paket yang dibutuhkan... Mohon tunggu!"
-sudo apt install -y python3 python3-pip docker-compose figlet cowsay lolcat neofetch git certbot nginx python3-certbot-nginx timedatectl
+sudo apt install -y python3 python3-pip docker-compose figlet cowsay lolcat neofetch git certbot nginx python3-certbot-nginx
 
 # Unduh skrip Python
 curl -o ~/bw.py -O https://raw.githubusercontent.com/yourtulloh/homeVPS/master/bw.py -s
 
+clear
+
 # Set zona waktu
 timedatectl set-timezone Asia/Jakarta
 # Pesan konfirmasi
-echo "Paket telah berhasil diinstal!" | lolcat
+echo "Paket telah berhasil di instal." | lolcat
 
 # Minta input nama header dan logo dari pengguna
 echo "Masukkan Nama Header:" | lolcat
