@@ -5,18 +5,18 @@ clear
 
 # Update dan upgrade paket sistem
 echo "Menjalankan apt update & upgrade... Mohon tunggu!"
-sudo apt update && sudo apt upgrade -y > /dev/null
+sudo apt update && sudo apt upgrade -y
 
 # Instal paket yang diperlukan
 echo "Menginstal paket yang dibutuhkan... Mohon tunggu!"
-sudo apt install -y python3 python3-pip docker-compose figlet cowsay lolcat neofetch git curl certbot nginx python3-certbot-nginx timedatectl > /dev/null
+sudo apt install -y python3 python3-pip docker-compose figlet cowsay lolcat neofetch git certbot nginx python3-certbot-nginx timedatectl
 
 # Unduh skrip Python
-curl -o ~/bw.py -O https://raw.githubusercontent.com/yourtulloh/homeVPS/master/bw.py -s > /dev/null
+curl -o ~/bw.py -O https://raw.githubusercontent.com/yourtulloh/homeVPS/master/bw.py -s
 
 # Set zona waktu
 sudo timedatectl set-timezone Asia/Jakarta
-
+clear
 # Pesan konfirmasi
 echo "Paket telah berhasil diinstal!" | lolcat
 
