@@ -32,8 +32,11 @@ echo -e "\ncowsay -f eyes $header_name | lolcat\nfiglet $logo_name | lolcat\ndat
 
 # Tampilkan pesan sukses
 figlet HomeVPS | lolcat
-echo "Instalasi berhasil. Silakan sambungkan kembali VPS Anda agar perubahan berlaku!" | lolcat
+echo "Instalasi berhasil" | lolcat
 
 # Bersihkan terminal dan jalankan skrip Python
 clear
-python3 ~/bw.py
+cowsay -f eyes $header_name | lolcat
+figlet $logo_name | lolcat
+date | lolcat
+python3 ~/bw.py | lolcat
