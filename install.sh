@@ -15,8 +15,7 @@ sudo apt install -y python3 python3-pip docker-compose figlet cowsay lolcat neof
 curl -o ~/bw.py -O https://raw.githubusercontent.com/yourtulloh/homeVPS/master/bw.py -s
 
 # Set zona waktu
-sudo timedatectl set-timezone Asia/Jakarta
-clear
+timedatectl set-timezone Asia/Jakarta
 # Pesan konfirmasi
 echo "Paket telah berhasil diinstal!" | lolcat
 
